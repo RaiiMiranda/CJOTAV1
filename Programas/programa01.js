@@ -3,7 +3,7 @@
 // -----------------------------------------------
 // Abrir o console: ctrl + j
 // Escrever: node nome_do_programa.js
-// -----------------------------------------------------------------------------------
+// -----------------------------------------------
 
 // A var idade é um número
 let idade = 42;
@@ -12,4 +12,5 @@ let idade = 42;
 idade = 'Quarenta e dois';
 
 // Apresenta no console
+
 console.log(idade);
