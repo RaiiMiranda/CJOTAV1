@@ -12,5 +12,4 @@ let idade = 42;
 idade = 'Quarenta e dois';
 
 // Apresenta no console
-
 console.log(idade);
