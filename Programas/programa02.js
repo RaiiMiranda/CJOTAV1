@@ -1,4 +1,8 @@
 // -----------------------------------------------------------------------------------
+// Revisão de JavaScript
+// -----------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------
 // Compilar o código
 // -----------------------------------------------------------------------------------
 // Abrir o console: ctrl + j
@@ -593,23 +597,93 @@ enemies.forEach((enemy, id, mapOriginal) => {
     console.log(`Enemy ${id}: ${enemy.name}`);
 });
 
+// Laço FOREACH - Exibe os dados
+enemies.forEach((enemy, id, mapOriginal) => {
+    console.log(mapOriginal);
+});
 
+// Desafio
+const enemies2 = new Map([
+    [1, {name: 'Na', type: 'Ogro', power: 100}],
+    [2, {name: 'Ra', type: 'Monge', power: 25}],
+    [3, {name: 'Da', type: 'Fada', power: 10}]
+]);
+
+for (const [id, enemy] of enemies2) {
+    console.log(`${id}: ${enemy.type} [${enemy.power}]`);
+}
+
+enemies2.forEach((enemy) => {
+    enemy.type === 'Ogro' ? enemy.power++ : enemy.power += 5;
+
+    // if (enemy.type === 'Ogro') enemy.power++;
+    // else enemy.power += 5;
+});
+
+for (const [id, enemy] of enemies2) {
+    console.log(`${id}: ${enemy.type} [${enemy.power}]`);
+}
 
 
 // -----------------------------------------------------------------------------------
-// 
+// Operador Spread (...) - Desempacotar uma coleção de itens
 // -----------------------------------------------------------------------------------
 
+// Arrays originais
+const items = ['Moeda', 'Espada','Poção'];
+const enemies3 = ['Ogro', 'Monstro', 'Calango'];
+const newArray = [...items, ...enemies3];
 
+console.log(newArray);
 
+// Cópia rasa dos elementos de um array
+const original = [1, 2, 3];
+const copia = [...original];
 
-// -----------------------------------------------------------------------------------
-// 
-// -----------------------------------------------------------------------------------
+console.log(copia);
 
+// Principais usos do operador Spread:
 
+// 1) Mesclagem das propriedade de objetos
+// A última propriedade com a mesma chave prevalece
+const enemy = {name: 'Tiozão', health: 100};
+const type = {type: 'Ogro', power: 50};
+const newEnemy = {...enemy, ...type};
 
+console.log(newEnemy);
 
-// -----------------------------------------------------------------------------------
-// 
-// -----------------------------------------------------------------------------------
+// 2) Cria um novo objeto com propriedades atualizadas
+let item3 = {id: 1, name: 'Moeda', points: 2};
+item3 = {...item3, points: 10}; // Atualiza os dados do objeto original
+
+console.log(item3);
+
+// 3) Passagem de argumentos para funções
+const numeros2 = [10, 5, 25];
+const maximo = Math.max(...numeros2);
+
+console.log(maximo);
+
+// 4) Separa os caracteres de uma string
+const palavra = 'IFSP-CJO';
+const letras = [...palavra];
+
+console.log(letras);
+
+// 5) Converte um Set para um array
+const duplicados = [1, 2, 3, 4, 4, 5];
+const temp = new Set(duplicados);
+const unicos = [...temp];
+
+console.log(unicos);
+
+// 6) Converte um Map para um array
+const meuMap2 = new Map([['Moeda', 2], ['Estrela', 5]]);
+
+const dadosMap = [...meuMap2];
+const chavesMap = [...meuMap2.keys()];
+const valoresMap = [...meuMap2.values()];
+
+console.log(dadosMap);
+console.log(chavesMap);
+console.log(valoresMap);
