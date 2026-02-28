@@ -399,7 +399,208 @@ do {
 while(numeroSorteado !== valorEscolhido);
 
 // Exibe o total de tentativas que foram utilizadas
-console.log(`Encontrou o número em ${tentativas} tentativas.`);
+if (tentativas === 1)
+    console.log(`Encontrou o número em ${tentativas} tentativa.`);
+else 
+    console.log(`Encontrou o número em ${tentativas} tentativas.`);
+
+// Laço: For In
+for (let propriedade in player) {
+    // Exibe cada propriedade do objeto player
+    console.log(`${propriedade}: ${player[propriedade]}`);
+}
+
+// Laço: For Of
+const numeroSorteados = [4, 12, 24, 32, 34, 53];
+
+for (let numero of numeroSorteados) {
+    // Para exibir os elementos do array
+    console.log(`Número sorteado: ${numero}`);
+}
+
+let nome2 = "Raiane";
+
+for (let letra of nome2) {
+    // Para exibir as letras da string
+    console.log(letra);
+}
+
+
+// ------------------------------------------------------------------------------------
+// Métodos com Set (um conjunto de elementos únicos)
+// quando precisar que um array não tenha valores repetidos é só transformar ele em Set
+// ------------------------------------------------------------------------------------
+
+// Cria um novo Set vazio
+const meuSet = new Set();
+
+// Cria um novo Set utilizando um array
+const setComArray = new Set([1, 2, 'Maçã', 2, 'Maçã', 'Uva']);
+
+// Exibe os dados
+console.log(meuSet);
+console.log(setComArray);
+
+// Função: ADD - Adiciona alguns itens no conjunto 'meuSet'
+meuSet.add(10);     // {10}
+meuSet.add(20);     // {10, 20}
+meuSet.add(10);     // {10, 20} (não adiciona duplicado)
+meuSet.add('Maçã'); // {10, 20, Maçã}
+console.log(meuSet); // {10, 20, Maçã}
+
+// Função HAS - Verifica se alguns estão armazenados no conjunto 'meuSet'
+console.log(meuSet.has(10));
+console.log(meuSet.has(30));
+console.log(meuSet.has('Maçã'));
+
+// Função DELETE - Remove alguns itens armazenados no conjunto 'meuSet'
+console.log(meuSet.delete(20));
+console.log(meuSet.delete(50));
+console.log(meuSet.delete('Uva'));
+console.log(meuSet);
+
+// ENCADEAMENTO - Adiciona mais itens no conjunto 'meSet'
+meuSet.add(5).add(15).add('Morango');
+console.log(meuSet);
+
+// Função CLEAR - Remove todos os itens do conjunto 'meuSet'
+meuSet.clear();
+
+// Função SIZE - Exibe o total de itens no 
+console.log(meuSet.size);
+console.log(meuSet);
+
+// Cria um novo conjunto
+const frutas2 = new Set(['Maçã', 'Banana', 'Uva']);
+
+// Laço FOR OF - Exibe cada fruta no conjunto frutas
+for (const fruta of frutas2) {
+    console.log(fruta);
+}
+
+// Função VALUES - Exibe os dados
+for (const valor of frutas2.values()) {
+    console.log(valor);
+}
+
+// Função ENTRIES - Exibe os dados (chave e valor)
+// Tipo: Player { nome: Raiane } (chave: nome, valor: Raiane)
+for (const entrada of frutas2.entries()) {
+    console.log(entrada);
+}
+
+// Cria um novo conjunto
+const frutas3 = new Set(['Maçã', 'Banana', 'Uva']);
+
+// Laço FOREACH - Exibe os dados
+// Em um Set, valor e chave são os mesmos
+frutas.forEach((valor, chave, setOriginal) => {
+    console.log(`Chave: ${chave}; Valor: ${valor}`); // Chave: Maçã; Valor: Maçã
+    console.log(setOriginal);
+});
+
+
+// -----------------------------------------------------------------------------------
+// Maps - coleção de pares chave-valor (o tipo da chave pode ser qualquer um)
+// -----------------------------------------------------------------------------------
+
+// Cria um novo Map vazio
+const meuMap = new Map();
+
+// Cria um novo Map, utilizando um array
+const mapComArray = new Map([
+    ['name', 'Neusa'],
+    ['health', 100]
+]);
+
+// Exibe os dados
+console.log(meuMap);
+console.log(mapComArray.get('name'));
+
+// Cria um novo Map vazio
+const playerMap = new Map();
+
+// Adiciona itens no 'playerMap'
+playerMap.set('id', 123);
+playerMap.set(
+    'player', {
+        name: 'Pikachu Raivoso',
+        health: 100
+    }
+);
+
+// Função SET - Define e adiciona uma função
+const slogan = () => {};
+
+playerMap.set(slogan, 'Uga, Uga ... Grrrrr!');
+console.log(playerMap.get(slogan));
+
+// Função GET - Exibe os itens
+console.log(playerMap.get('id'));
+console.log(playerMap.get('player').name);
+
+// Verifica se algumas chaves existem em 'playerMap'
+console.log(playerMap.has('id'));
+console.log(playerMap.has('player'));
+console.log(playerMap.has('type'));
+
+// Verifica se a chave 'player' existe e se dentro dela existe a chave 'name'
+console.log(playerMap.has('player') && 'name' in playerMap.get('player'));
+
+// Função SIZE - Retorna o tamanho do mapa
+console.log(playerMap.size);
+
+// Função DELETE - Remove slogan
+playerMap.delete(slogan);
+
+// Função HAS -- Verifica se 'slogan' existe
+console.log(playerMap.has('slogan'));
+
+// Função CLEAR - Remove todos os itens
+playerMap.clear();
+console.log(playerMap.size);
+
+// Cria um novo Map vazio
+const enemies = new Map();
+
+// Adiciona alguns inimigos
+enemies.set(1, {name: 'Na', type: 'Ogro'});
+enemies.set(2, {name: 'Ra', type: 'Monstro'});
+enemies.set(3, {name: 'Dani', type: 'Calango'});
+
+// Laço FOR OF - Iterando sobre o mapa
+for (const [id, enemy] of enemies) {
+    console.log(`Id: ${id}, Nome: ${enemy.name}`);
+}
+
+// Função KEYS - Exibe os dados
+for (const id of enemies.keys()) {
+    console.log(`Chave: ${id}`);
+}
+
+// Função VALUES - Exibe os dados
+for (const enemy of enemies.values()) {
+    console.log(`Tipo: ${enemy.type}`);
+}
+
+// Função ENTRIES - Exibe os dados
+for (const row of enemies.entries()) {
+    console.log(row);
+}
+
+// Laço FOREACH - Exibe os dados
+enemies.forEach((enemy, id, mapOriginal) => {
+    console.log(`Enemy ${id}: ${enemy.name}`);
+});
+
+
+
+
+// -----------------------------------------------------------------------------------
+// 
+// -----------------------------------------------------------------------------------
+
+
 
 
 // -----------------------------------------------------------------------------------
