@@ -1,0 +1,129 @@
+{
+    "activeFile": "map-aistorm.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "exportAsImage.drawObjectLabels": true,
+    "exportAsImage.useCurrentScale": true,
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "#Idle": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "#buildings": {
+            "scaleInDock": 3
+        },
+        "#props": {
+            "scaleInDock": 3
+        },
+        "#tileset": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "#tileset2": {
+            "scaleInEditor": 1
+        },
+        "map-aistorm.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1.3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 684.2307692307692,
+                "y": 314.6153846153845
+            }
+        },
+        "map-aistorm.tmx#buildings": {
+            "scaleInDock": 3
+        },
+        "map-aistorm.tmx#props": {
+            "scaleInDock": 3
+        },
+        "map-aistorm.tmx#tileset": {
+            "scaleInDock": 3
+        },
+        "map-topdown.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 518.6666666666666,
+                "y": 359.33333333333337
+            }
+        },
+        "map-topdown.tmx#buildings": {
+            "scaleInDock": 3
+        },
+        "map-topdown.tmx#props": {
+            "scaleInDock": 3,
+            "scaleInEditor": 1
+        },
+        "map-topdown.tmx#tileset": {
+            "scaleInDock": 2
+        },
+        "mapa-teste.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 207,
+                "y": 170.75
+            }
+        },
+        "mapa-teste.tmx#Idle": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "mapa-teste.tmx#buildings": {
+            "scaleInDock": 3
+        },
+        "mapa-teste.tmx#props": {
+            "scaleInDock": 3
+        },
+        "mapa-teste.tmx#tileset": {
+            "scaleInDock": 1.5
+        },
+        "side-scroller.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 424,
+                "y": -1.5
+            }
+        },
+        "top-down.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 480.66666666666663,
+                "y": 263.33333333333326
+            }
+        }
+    },
+    "last.exportedFilePath": "D:/Topicos-Avancados/Jogo-Tecnologia-04-06-trabalho/assets/map",
+    "last.imagePath": "D:/Topicos-Avancados/Jogo-Tecnologia-21-05-trabalho/assets/map",
+    "map.height": 60,
+    "map.lastUsedExportFilter": "Arquivos de mapa JSON (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 90,
+    "openFiles": [
+        "map-aistorm.tmx"
+    ],
+    "project": "map.tiled-project",
+    "recentFiles": [
+        "map-aistorm.tmx",
+        "top-down.tmx",
+        "map-topdown.tmx",
+        "mapa-teste.tmx",
+        "side-scroller.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
